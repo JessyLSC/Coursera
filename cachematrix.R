@@ -43,7 +43,13 @@ cacheSolve <- function(x, ...) {
 ## Just to check:
 test_matrix <- makeCacheMatrix(matrix(2:5, 2, 2))
 test_matrix$get()
-
+##       [,1] [,2]
+## [1,]    2    4
+## [2,]    3    5
 test_matrix$getinverse() #### Expected: NULL
+## NULL
 
 cacheSolve(test_matrix) #### getting cached data
+##      [,1] [,2]
+## [1,] -2.5    2
+## [2,]  1.5   -1
